@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelpApp.Domain
+namespace HelpApp.Infra.Data.Repositories
 {
-    public class Product
+    internal class ProductRepositories
     {
     }
 }

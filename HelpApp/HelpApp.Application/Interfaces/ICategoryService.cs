@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelpApp.Domain
+namespace HelpApp.Application.Interfaces
 {
-    public class Category
+    internal class ICategoryService
     {
     }
 }
