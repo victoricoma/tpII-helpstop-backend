@@ -1,4 +1,4 @@
-! [Logo HelpAPP] ()
+![logo](https://github.com/user-attachments/assets/75f7bd61-e719-4f2b-994a-3cc8f563ff83)
 
 # 🔎 HelpStop
 Um aplicativo de gestão de atendimentos com arquitetura limpa e princípios sólidos de engenharia de software.
@@ -101,4 +101,4 @@ Miguel Miranda Morandini - Back-end, Testes, Modelagem e Documentação -  ([@Mi
 ## 📜 Licença
 Este projeto está sob `MIT License`. Confira o arquivo `LICENSE` neste repósitorio.
 
-! [Banner HelpAPP] ()
+![banner](https://github.com/user-attachments/assets/95b3f8d0-8df9-4409-9970-9a98b34f0d55)
