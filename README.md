@@ -1,6 +1,6 @@
 ![logo HelpApp](https://github.com/user-attachments/assets/75f7bd61-e719-4f2b-994a-3cc8f563ff83)
 
-# 🔎 HelpStop
+# 🔎 HelpApp
 Um aplicativo de gestão de atendimentos com arquitetura limpa e princípios sólidos de engenharia de software.
 
 ## 📚 Descrição Geral:
