@@ -92,9 +92,9 @@ O projeto inclui testes automatizados para as principais camadas, garantindo a q
        
 ## Autores
 
-**Pedro Henrique Albuquerque Souza** 
-**Função:** Desenvovedor Banck-end.
-**Git:** Pedro4Albuquerque .
+*  **Pedro Henrique Albuquerque Souza** 
+*  **Função:** Desenvovedor Banck-end.
+*  **Git:** Pedro4Albuquerque .
 
 ## Licença
 Esta projeto eatá licenciado sob licença MIT.
