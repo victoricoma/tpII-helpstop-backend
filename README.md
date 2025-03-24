@@ -1,105 +1,100 @@
-🎯 Objetivo:
-Elaborar a documentação principal (README.md) do projeto HelpApp, estruturando de forma clara e didática as informações essenciais sobre o funcionamento, objetivos, arquitetura e fundamentos teóricos do sistema. A documentação deve ser adequada para novos desenvolvedores, professores e avaliadores entenderem o projeto rapidamente, mesmo sem conhecer o código.
 
-🧱 Estrutura Recomendada do README.md
-A documentação deve conter os seguintes blocos, preenchidos conforme o conteúdo do seu projeto:
-
-1. 📌 Nome do Projeto
 # HelpApp
-Um aplicativo de gestão de atendimentos voluntários, desenvolvido com arquitetura limpa e princípios sólidos da engenharia de software.
 
-## 📚 Descrição Geral
-Escreva brevemente:
+O **HelpApp** é um sistema destinado à gestão de atendimentos coluntários, facilitando a conexão entre individuas que necessitam de ajuda e voluntários disposto a oferecer suporte. Esta repositório contém backend do projeto, desenvolvido comuma arquitetura limpa e princípios sólidos de engenharia de software.
 
-O que o sistema HelpApp realiza.
-Qual problema resolve.
-Quem são os usuários (público-alvo).
-Tecnologias utilizadas.
-Exemplo:
+## Descrição Geral
 
-O HelpApp é um sistema para organizar atendimentos voluntários, focado em facilitar o encontro entre quem precisa de ajuda e quem pode ajudar. O projeto foi construído utilizando a plataforma .NET Core, com persistência em SQL Server e implantação na nuvem via Azure Server Apps. Toda a lógica foi projetada com base em princípios de desenvolvimento sustentável e manutenção facilitada, utilizando os conceitos do SOLID.
+O **HelpApp** permite o cadastro de usuários em dois perfis: ajudantes e solicitantes. A plataforma possibilita o registro e gerenciamento de atendimento, oferecendo uma agenda personalizada e histórico de ações. O Sistema foi desenvilvido utilizando a plataforma .NET core, com persistencia de dados em SQL Serve e implantação na nuvem via Azure App Services. Toda lógica foi projetada com base nos princípios SOLID, Visando um código sustentável e de facil manutenção. 
 
-3. 🧪 Funcionalidades
-Liste funcionalidades principais, por exemplo:
+## Funcionalidades
 
-Cadastro de usuários (ajudante e solicitante).
-Registro e gerenciamento de atendimentos.
-Agenda personalizada.
-Histórico e relatórios de ações.
-Login seguro com autenticação e autorização.
-4. 🏗️ Arquitetura do Projeto
-Explique a arquitetura geral do projeto:
+*  Cadastro de usuários (ajudante e solicitante).
+*  Registro e gerenciamento de atendimentos.
+*  Agenda personalizada.
+*  Histórico e relatórios de ações.
+*  Login seguro com autenticação e autorização.
 
-Divisão por camadas (Domain, Application, Infrastructure, Interface).
-Padrões utilizados (DDD, Clean Architecture).
-Explicação da função de cada camada.
-Exemplifique com um diagrama simples, se possível (pode ser em texto mesmo).
-5. ⚙️ Princípios SOLID Aplicados
-Apresente os 5 princípios SOLID com exemplos do HelpApp, seguindo a lógica da playlist de estudo:
+## Arquitetura do Projeto
 
-5.1. S - Single Responsibility Principle
-Cada classe deve ter uma responsabilidade única.
-No HelpApp, por exemplo, UserManager trata apenas da lógica de criação e atualização de usuários, sem interferir em regras de agendamento ou autenticação.
+O Projeto é estruturado em camadas , seguindo os padrões de Domain-Drivem Desing (DDD) e Clean Architecture:
 
-5.2. O - Open/Closed Principle
-O sistema deve estar aberto para extensão, mas fechado para modificação.
-Utilizamos interfaces (IUserRepository, IAttendanceService) para permitir que novas implementações sejam adicionadas sem alterar o código existente.
+*  **Domain:** Contém as entidades e interfazes que definem o nucleo do negócio.
+*  **Application:** Implementa os casos de uso e a lógica de aplicação.
+*  **Infrastrutue:** Resposável pela comunicação com o banco de dados e serviçõs externos.
+*  **interfaces:** Inclui os controladores e interfaces de usuário.
+  
+## Princípios SOLID Aplicados
 
-5.3. L - Liskov Substitution Principle
-As subclasses devem poder substituir as superclasses sem alterar o comportamento do sistema.
-Serviços de notificação como EmailNotifier e SmsNotifier herdam de uma interface comum e podem ser alternados sem quebrar funcionalidades.
+1. **Single Responsibility Principle:** Cada classe possui uma única responsabilidade. Por exemplo, a classe UserManager lida Exclusivamente com a logica de criação e atualização de usuários.
 
-5.4. I - Interface Segregation Principle
-Interfaces específicas são melhores que genéricas.
-O HelpApp usa interfaces distintas para contextos diferentes, como ILoginService, IAgendaManager, evitando que uma classe tenha que implementar métodos que não usa.
+2. **Open/Closed Principle:** O sistema está aberto para extensão, mas fechado para modificação. Utilizamos interfaces com IUserRepository e IAttendanceService para permitir novas implementções sem alterar o código existente.
+   
+3. **Liskov Substituion Principle:** Subclasses podem substituir superclasses sem alterar o comportamento do sistema . Serviços de notificação como EmailNotifier e SmsNotifier herdam uma interdace comum e podem ser alternados sem quebrar funcionalidades.
+   
+4. **Interface Segragation Principle:** Interfaces especificas são preferíveis a genéricas. O HelpApp utiliza interfaces distintas para contextos deferentes, como IloginService A IAgendaMenager, evitando que uma classe implementa métodos que náo utiliza.
+   
+5. **Dependency Inversion Principle:** Módulos de alto nível não dependem de módulos de baixo nível: ambos dependem de abstrações.A camada de aplicação depende de interfaces, não diretamente de SQL Serve ou do .NET, tornado o código desacoplado e testável.
+   
+## Tecnologia e Ferramentas 
+<table>
+  <tr>
+    <td>Linguagem</td>
+    <td>Banco de Dados</td>
+    <td>Amviente</td>
+    <td>IDE</td>
+    <td>ORM</td>
+    <td>Testes</td>
+    <td>Controle de Versão</td>
+  </tr>
+  <tr>
+    <td>C# (.NET Core)</td>
+    <td>SQL Serve</td>
+    <td>Azure App Services</td>
+    <td>Visual Studi / VS Code</td>
+    <td>Entity Framework Core</td>
+    <td>xUnit ou NUnit</td>
+    <td>Git + GitHub</td>
+  </tr>
+</table>
 
-5.5. D - Dependency Inversion Principle
-Os módulos de alto nível não devem depender dos de baixo nível; ambos devem depender de abstrações.
-A camada de aplicação depende de interfaces e não diretamente do SQL Server ou do .NET, tornando o código desacoplado e testável.
+## Como Rodar o Projeto
 
-6. 🧩 Tecnologias e Ferramentas
-Liste com clareza o que foi usado no projeto:
+1. Clone o repositótio:
+2. Abra o projeto no Visual Studio.
+3. Configure a string de conexão no arquivo aapsettings.json.
+4. Execute o comando Update-Database np Package Manager Console para aplicar as migratons.
+5. Inicie a aplicação (pressione F5 ou utiliza a CLI).
+6. Teste as rotas utilizando ferramentas como Postman ou Swagger.
+  
+## Testes Automatizados
 
-Linguagem: C# (.NET Core)
-Banco de Dados: SQL Server
-Ambiente: Azure App Services
-IDE: Visual Studio / VS Code
-ORM: Entity Framework Core
-Testes: xUnit ou NUnit (conforme usado)
-Controle de Versão: Git + GitHub
-7. 🔧 Como Rodar o Projeto
-Inclua um passo a passo claro:
+O projeto inclui testes automatizados para as principais camadas, garantindo a qualidade e integridade do código. Para executar os testes:
 
-Clonar o repositório.
-Abrir no Visual Studio.
-Configurar a string de conexão no appsettings.json.
-Executar Update-Database para aplicar migrations.
-Rodar a aplicação (F5 ou CLI).
-Testar rotas via Postman ou Swagger.
-8. 🧪 Testes Automatizados
-Explique:
+1. Navegue até o diretório dos testes.
 
-Quais camadas possuem testes.
-Como executar os testes.
-Ferramentas usadas.
-Qual cobertura foi priorizada (ex: regras de negócio).
-9. 📂 Estrutura de Pastas
-Apresente a estrutura do projeto, por exemplo:
+2. Execute os testes utilizando o comando apropriado para a ferramenta de testes escolhida (xUnit ou NUnit).
 
-HelpApp/ ├── Domain/ │   └── Entities/ │   └── Interfaces/ ├── Application/ │   └── UseCases/ ├── Infrastructure/ │   └── Data/ │   └── Services/ ├── Interfaces/ │   └── Controllers/ ├── Tests/ └── Program.cs 10. 👨‍💻 Autores
-Inclua para cada membro do grupo:
+## Estrutura de Pastas 
 
-Nome completo
-Função (back-end, testes, modelagem, documentação, etc)
-GitHub (se desejar)
-11. 📜 Licença
-Informe se o projeto possui licença livre (ex: MIT) ou se está sob uso acadêmico.
+1. HelpStop
+    1. Domain/
+       1. Interfaces/
+    2. Application/
+       1. UseCases/
+    3. Infrastructura/
+       1. Data/
+          1. Services/
+    4. Interfaces/
+       1. Controllers/
+    5. Tests/
+    6. Progama.cs
+       
+## Autores
 
-✅ Critérios de Avaliação
-A qualidade do README.md será medida por:
+**Pedro Henrique Albuquerque Souza** 
+**Função:** Desenvovedor Banck-end.
+**Git:** Pedro4Albuquerque .
 
-Clareza, coesão e ortografia.
-Coerência entre a documentação e o código.
-Aplicação dos conceitos de SOLID com exemplos reais.
-Apresentação lógica da arquitetura.
-Facilidade de reprodução do projeto localmente.
+## Licença
+Esta projeto eatá licenciado sob licença MIT.
