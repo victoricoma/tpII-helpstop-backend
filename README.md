@@ -1,11 +1,11 @@
+![Image](https://github.com/user-attachments/assets/9845c78b-3354-4077-a080-5f6cfc627d2a)
+# HELPR MANAGER
 
-# HelpApp
-
-O **HelpApp** é um sistema destinado à gestão de atendimentos coluntários, facilitando a conexão entre individuas que necessitam de ajuda e voluntários disposto a oferecer suporte. Esta repositório contém backend do projeto, desenvolvido comuma arquitetura limpa e princípios sólidos de engenharia de software.
+O **HELPR MANAGER** é um sistema destinado à gestão de atendimentos coluntários, facilitando a conexão entre individuas que necessitam de ajuda e voluntários disposto a oferecer suporte. Esta repositório contém backend do projeto, desenvolvido comuma arquitetura limpa e princípios sólidos de engenharia de software.
 
 ## Descrição Geral
 
-O **HelpApp** permite o cadastro de usuários em dois perfis: ajudantes e solicitantes. A plataforma possibilita o registro e gerenciamento de atendimento, oferecendo uma agenda personalizada e histórico de ações. O Sistema foi desenvilvido utilizando a plataforma .NET core, com persistencia de dados em SQL Serve e implantação na nuvem via Azure App Services. Toda lógica foi projetada com base nos princípios SOLID, Visando um código sustentável e de facil manutenção. 
+O **HELPR MANAGER** permite o cadastro de usuários em dois perfis: ajudantes e solicitantes. A plataforma possibilita o registro e gerenciamento de atendimento, oferecendo uma agenda personalizada e histórico de ações. O Sistema foi desenvilvido utilizando a plataforma .NET core, com persistencia de dados em SQL Serve e implantação na nuvem via Azure App Services. Toda lógica foi projetada com base nos princípios SOLID, Visando um código sustentável e de facil manutenção. 
 
 ## Funcionalidades
 
