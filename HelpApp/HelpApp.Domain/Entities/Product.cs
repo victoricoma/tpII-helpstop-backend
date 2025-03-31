@@ -1,7 +1,7 @@
 ﻿using HelpApp.Domain.Entities;
 using HelpApp.Domain.Validation;
 
-namespace StockApp.Domain.Entities
+namespace HelpApp.Domain.Entities
 {
     public class Product
     {
@@ -51,6 +51,7 @@ namespace StockApp.Domain.Entities
 
             DomainExceptionValidation.When(image.Length > 250, "Invalid image name, too long, maximum 250 characters.");
 
+            DomainExceptionValidation.When(string.IsNullOrEmpty(image), "Invalid image, image is required");
         }
     }
 }
